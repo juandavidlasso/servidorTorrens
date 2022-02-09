@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon --exec npx babel-node server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +14,11 @@
     "express": "^4.17.2",
     "mongoose": "^6.2.1",
     "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.2",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11"
   }
 }
