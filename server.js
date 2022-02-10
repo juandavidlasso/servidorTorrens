@@ -2,6 +2,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 import bodyParser from 'body-parser'
 import routeUsuario from './routes/usuarioRoute'
+import routeTarea from './routes/tareaRoute'
 import './config'
 
 const app = express()
@@ -10,7 +11,9 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+// Rutas para peticiones a la DB
 app.use('/api', routeUsuario)
+app.use('/api', routeTarea)
 
 // Conexion a la DB
 mongoose.connect('mongodb://localhost:27017/pruebaTorrens', (err, res) => {
