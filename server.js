@@ -1,6 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import bodyParser from 'body-parser'
+import cors from 'cors'
 import routeUsuario from './routes/usuarioRoute'
 import routeTarea from './routes/tareaRoute'
 import './config'
@@ -8,6 +9,7 @@ import './config'
 const app = express()
 
 // Middlewares
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 

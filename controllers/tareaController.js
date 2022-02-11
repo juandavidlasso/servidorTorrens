@@ -144,3 +144,25 @@ export let eliminarTarea = (req, res) => {
         })
     })
 }
+
+
+
+// Consulto las tareas de cada usuario
+export let obtenerTareaUsuario = (req, res) => {
+
+    let body = req.body
+
+    TareaSchema.find({ idUsuario: body.idUsuario }).exec((err, data) => {
+        if(err) {
+            return res.json({
+                status: 400,
+                mensaje: 'Error en la conexión con el servidor.'
+            })
+        }
+
+        res.json({
+            status: 200,
+            data
+        })
+    })
+}

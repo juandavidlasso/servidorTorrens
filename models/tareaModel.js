@@ -17,7 +17,7 @@ let tareaSchema = new Schema({
         required: [true, 'El tiempo es obligatorio']
     },
     idUsuario: {
-        type: Number,
+        type: String,
         required: [true, 'El usuario asignado es obligatorio']
     }
 })

@@ -28,10 +28,6 @@ let usuarioSchema = new Schema({
         type: String,
         required: [true, 'El rol es obligatorio']
     },
-    usuario: {
-        type: String,
-        required: [true, 'El nombre de usuario es obligatorio']
-    },
     password: {
         type: String,
         required: [true, 'La contraseña es obligatoria']
