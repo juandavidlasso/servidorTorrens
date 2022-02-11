@@ -25,7 +25,7 @@ let usuarioSchema = new Schema({
         required: [true, 'El estado es obligatorio']
     },
     rol: {
-        type: String,
+        type: Number,
         required: [true, 'El rol es obligatorio']
     },
     password: {
